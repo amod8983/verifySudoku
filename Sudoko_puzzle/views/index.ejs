@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="card__header">
+        <h1 class="main__title">SUDOKU</h1>
+    </header>
+    <div align="center">
+        <form action="/submit" method="POST">
+        <div class="myGrid myCard" style="height:44rem; width:44rem">
+            <table>
+                <% for(i=0;i<9;i++){ %>
+                    <tr>
+                    <% for(j=0;j<9;j++){ %>
+                        <td>
+                            <input type="text" name="A<%= i %><%= j %>">
+                        </td>
+                    <% } %>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+        <div align="center">
+            <button type="submit" class="btn btn-primary" style="margin:8px">Submit</button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
